@@ -34,7 +34,7 @@ export async function login(body: Pick<User, "email" | "password">) {
     throw new NotFoundError("Invalid username or password");
   }
   const payload = {
-    id: existingUser.id,
+    userId: existingUser.userId,
     name: existingUser.name,
     email: existingUser.email,
     role: existingUser.role,

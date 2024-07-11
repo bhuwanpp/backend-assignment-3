@@ -25,7 +25,7 @@ export function getTaskById(
 ): IALLTasks | { error: string } {
   const data = TaskModel.getTaskById(id, userId);
   if (!data) {
-    throw new NotFoundError(`User with id: ${id} not found`);
+    throw new NotFoundError(`Task with id: ${id} not found`);
   }
   return data;
 }
